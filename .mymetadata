@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="party_member_management_system"
+  id="myeclipse.1508242886621"
+  context-root="/party_member_management_system"
+  j2ee-spec="5.0"
+  archive="party_member_management_system.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
