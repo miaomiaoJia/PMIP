@@ -55,7 +55,8 @@
                     <div class="contact-area">
                         <ul>
                             <li><i class="fa fa-user"></i>当前用户：1506010123（XX）</li>
-                            <li><a href="#">注销</a></li>
+                            <li><a href="login.jsp">注销</a></li>
+                            <li><a href="modifyPassword.jsp">修改密码</a></li>
                         </ul>
                     </div>
                 </div>

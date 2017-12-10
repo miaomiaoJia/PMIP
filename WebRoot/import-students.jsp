@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="assets/css/font-awesome.css">
     <link rel="stylesheet" href="assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.css">
     <link rel="stylesheet" href="assets/css/bootstrap-fileupload.min.css">
 
     <script src="assets/js/jquery-2.1.1.js"></script>
     <script src="assets/js/bootstrap.js"></script>
     <script src="assets/js/bootstrap-fileupload.js"></script>
     <script src="assets/js/studentsInformation.js"></script>
+    <script src="assets/js/bootstrap-datetimepicker.js"></script>
 </head>
 <body>
 
@@ -56,7 +58,8 @@
                     <div class="contact-area">
                         <ul>
                             <li><i class="fa fa-user"></i>当前用户：1506010123（XX）</li>
-                            <li><a href="#">注销</a></li>
+                            <li><a href="login.jsp">注销</a></li>
+                            <li><a href="modifyPassword.jsp">修改密码</a></li>
                         </ul>
                     </div>
                 </div>
@@ -101,53 +104,88 @@
             </ul>
         </div>
         <div class="col-md-10">
-            <div>
-                <h3>
-                    导入学生资料
-                </h3>
-                <form method="post" action="" class="form-horizontal">
-                    <div class="form-group">
-                        <label for="studentId" class="col-sm-2 text-right">学号:</label>
-                        <div class="col-sm-3">
-                            <input type="text" name="studentId" class="form-control col-sm-3" placeholder="1506010501"/>
-                        </div>
-
-                        <label for="studentName" class="col-sm-1 text-right" >姓名:</label>
-                        <div class="col-sm-3">
-                            <input type="text" name="studentName" class="form-control col-sm-3" placeholder="金培源"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="fileName" class="col-sm-2 text-right">导入文件:</label>
-                        <div class="col-sm-10">
-                            <div class="fileupload fileupload-new" data-provides="fileupload">
-                                <span class="btn btn-file btn-default">
-                                    <span class="fileupload-new">选择文件</span>
-                                    <span class="fileupload-exists">Change</span>
-                                    <input type="file" id="fileName">
-                                </span>
-                                <span class="fileupload-preview"></span>
-                                <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none">×</a>
+       		 <div class="row-fluid" id="inputs">
+                    <form method="post" action="" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="studentName" class="col-sm-4 text-right">学生姓名:</label>
+                            <div class="col-sm-8">
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" name="studentName" id="studentName" placeholder="金培源"/>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="form-group">
+                            <label for="studentId" class="col-sm-4 text-right">学生学号:</label>
+                            <div class="col-sm-8">
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" name="studentId" id="studentId" placeholder="1506010512"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="materialName" class="col-sm-4 text-right">材料名称:</label>
+                            <div class="col-sm-8">
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" name="materialName" id="materialName" placeholder="预备党员思想汇报"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="materialType" class="col-sm-4 text-right">材料类别:</label>
+                            <div class="col-sm-8">
+                                <div class="col-sm-6">
+                                    <select class="form-control selectChoice" id="materialType" name="materialType">
 
-
-                    <!--operator button-->
-                    <div class="form-group ">
-
-                        <div class="col-sm-6 col-sm-push-4 col-xs-5 ">
-                            <button class="btn btn-info  center-block col-sm-2" type="submit">提交</button>
+                                    <option value="">思想汇报</option>
+                                    <option value="">转正申请</option>
+                                    <option value="">竞赛成果</option>
+                                    <option value="">四六级成绩</option>
+                                    <option value="">计算机等级成绩</option>
+                                    <option value="">社会工作</option>
+                                    <option value="">获得奖项</option>
+                                </select>
+                                </div>
+                            </div>
                         </div>
 
+                        <div class="form-group">
+                            <label for="fileTime" class="col-sm-4 text-right">材料时间:</label>
+                            <div class="col-sm-8">
+                                <div class="col-sm-6">
+                                    <div class="input-group date" id="date" data-date-viewmode="years" >
+                                    <input type="text" class="form-control" readonly >
+                                    <!--<span class="input-group-addon add-on"><i class="fa fa-remove"></i> </span>-->
+                                    <span class="input-group-addon add-on"><i class="fa fa-calendar"></i></span>
+                                </div>
+                                </div>
+                            </div>
 
-                        <div class="col-sm-6 ">
-                            <button class="btn btn-danger col-sm-2 " type="reset">重置</button>
+
                         </div>
-                    </div>
-                </form>
 
-            </div>
+                        <div class="form-group">
+                            <label for="fileName" class="col-sm-4 text-right">相关文件&nbsp</label>
+                            <div class="col-sm-8">
+                                <div class="col-sm-12">
+                                    <input type="file" id="fileName">
+                                    	（支持格式jpg,gif,png,jpeg,bmp,zip,rar,doc,xls,ppt,docx,xlsx,pptx,pdf）
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--operator button-->
+                        <div class="form-group">
+                            <div class="col-sm-6">
+                                <button class="btn btn-info pull-right" type="submit">提交</button>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <button class="btn btn-danger" type="reset">重置</button>
+                            </div>
+                        </div>
+                    </form>
+
+             </div>
         </div>
     </div>
 </div>

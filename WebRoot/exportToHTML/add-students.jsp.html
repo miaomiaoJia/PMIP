@@ -1,0 +1,253 @@
+<html>
+<head>
+<title>add-students.jsp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #6e6b68; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(255,231,146); }
+.s1 { color: rgb(255,231,146); font-weight: bold; }
+.s2 { color: rgb(174,129,255); }
+.s3 { color: rgb(248,248,242); }
+.s4 { color: rgb(247,247,241); }
+.s5 { color: rgb(247,38,113); }
+.s6 { color: rgb(166,226,46); }
+.s7 { color: rgb(255,231,146); }
+.s8 { color: rgb(115,111,92); }
+.s9 { color: rgb(174,129,255); font-weight: bold; }
+.s10 { color: rgb(0,0,0); }
+.s11 { color: rgb(248,248,242); }
+.s12 { color: rgb(102,217,239); }
+.s13 { color: rgb(174,129,255); }
+</style>
+</head>
+<BODY BGCOLOR="#272822">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+add-students.jsp</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<span class="s0">&lt;%@</span><span class="s1">page </span><span class="s2">contentType</span><span class="s0">=&quot;</span><span class="s2">text/html;charset=utf-8</span><span class="s0">&quot;%&gt;</span><span class="s3"> 
+</span><span class="s4">&lt;</span><span class="s5">html</span><span class="s4">&gt;</span><span class="s3"> 
+</span><span class="s4">&lt;</span><span class="s5">head</span><span class="s4">&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;</span><span class="s5">meta </span><span class="s6">charset=</span><span class="s7">&quot;utf-8&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;</span><span class="s5">meta </span><span class="s6">http-equiv=</span><span class="s7">&quot;X-UA-Compatible&quot; </span><span class="s6">content=</span><span class="s7">&quot;IE=edge&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;</span><span class="s5">title</span><span class="s4">&gt;</span><span class="s3">添加学生</span><span class="s4">&lt;/</span><span class="s5">title</span><span class="s4">&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;</span><span class="s5">meta </span><span class="s6">name=</span><span class="s7">&quot;description&quot; </span><span class="s6">content=</span><span class="s7">&quot;&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;</span><span class="s5">meta </span><span class="s6">name=</span><span class="s7">&quot;viewport&quot; </span><span class="s6">content=</span><span class="s7">&quot;width=device-width, initial-scale=1&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+ 
+    </span><span class="s8">&lt;!-- Place favicon.ico and apple-touch-icon.png in the root directory --&gt;</span><span class="s3"> 
+ 
+ 
+    </span><span class="s4">&lt;</span><span class="s5">link </span><span class="s6">rel=</span><span class="s7">&quot;stylesheet&quot; </span><span class="s6">href=</span><span class="s7">&quot;assets/css/font-awesome.css&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;</span><span class="s5">link </span><span class="s6">rel=</span><span class="s7">&quot;stylesheet&quot; </span><span class="s6">href=</span><span class="s7">&quot;assets/css/bootstrap.css&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;</span><span class="s5">link </span><span class="s6">rel=</span><span class="s7">&quot;stylesheet&quot; </span><span class="s6">href=</span><span class="s7">&quot;assets/css/main.css&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+ 
+    </span><span class="s4">&lt;</span><span class="s5">script </span><span class="s6">src=</span><span class="s7">&quot;assets/js/jquery-2.1.1.js&quot;</span><span class="s4">&gt;&lt;/</span><span class="s5">script</span><span class="s4">&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;</span><span class="s5">script </span><span class="s6">src=</span><span class="s7">&quot;assets/js/bootstrap.js&quot;</span><span class="s4">&gt;&lt;/</span><span class="s5">script</span><span class="s4">&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;</span><span class="s5">script </span><span class="s6">src=</span><span class="s7">&quot;assets/js/studentsInformation.js&quot;</span><span class="s4">&gt;&lt;/</span><span class="s5">script</span><span class="s4">&gt;</span><span class="s3"> 
+</span><span class="s4">&lt;/</span><span class="s5">head</span><span class="s4">&gt;</span><span class="s3"> 
+</span><span class="s4">&lt;</span><span class="s5">body</span><span class="s4">&gt;</span><span class="s3"> 
+ 
+</span><span class="s8">&lt;!-- Add your site or application content here --&gt;</span><span class="s3"> 
+ 
+</span><span class="s8">&lt;!-- header Start 
+================================================= --&gt;</span><span class="s3"> 
+ 
+</span><span class="s4">&lt;</span><span class="s5">section </span><span class="s6">id=</span><span class="s7">&quot;header&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;container&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+        </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;row&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-md-6&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;block-left&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;</span><span class="s5">nav </span><span class="s6">class=</span><span class="s7">&quot;navbar navbar-default&quot; </span><span class="s6">role=</span><span class="s7">&quot;navigation&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;container-fluid&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s8">&lt;!-- Brand and toggle get grouped for better mobile display --&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;navbar-header&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;</span><span class="s5">button </span><span class="s6">type=</span><span class="s7">&quot;button&quot; </span><span class="s6">class=</span><span class="s7">&quot;navbar-toggle collapsed&quot; </span><span class="s6">data-toggle=</span><span class="s7">&quot;collapse&quot;</span><span class="s4"> 
+                                        </span><span class="s6">data-target=</span><span class="s7">&quot;#bs-example-navbar-collapse-1&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                    </span><span class="s4">&lt;</span><span class="s5">span </span><span class="s6">class=</span><span class="s7">&quot;sr-only&quot;</span><span class="s4">&gt;</span><span class="s3">Toggle navigation</span><span class="s4">&lt;/</span><span class="s5">span</span><span class="s4">&gt;</span><span class="s3"> 
+                                    </span><span class="s4">&lt;</span><span class="s5">span </span><span class="s6">class=</span><span class="s7">&quot;icon-bar&quot;</span><span class="s4">&gt;&lt;/</span><span class="s5">span</span><span class="s4">&gt;</span><span class="s3"> 
+                                    </span><span class="s4">&lt;</span><span class="s5">span </span><span class="s6">class=</span><span class="s7">&quot;icon-bar&quot;</span><span class="s4">&gt;&lt;/</span><span class="s5">span</span><span class="s4">&gt;</span><span class="s3"> 
+                                    </span><span class="s4">&lt;</span><span class="s5">span </span><span class="s6">class=</span><span class="s7">&quot;icon-bar&quot;</span><span class="s4">&gt;&lt;/</span><span class="s5">span</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;/</span><span class="s5">button</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;nav-logo&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                    </span><span class="s4">&lt;</span><span class="s5">a </span><span class="s6">href=</span><span class="s7">&quot;index-manager.jsp&quot;</span><span class="s4">&gt;&lt;</span><span class="s5">h3</span><span class="s4">&gt;</span><span class="s3">党员信息管理系统</span><span class="s4">&lt;/</span><span class="s5">h3</span><span class="s4">&gt;&lt;/</span><span class="s5">a</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s8">&lt;!-- /.container-fluid --&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;/</span><span class="s5">nav</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s8">&lt;!-- .col-md-6 --&gt;</span><span class="s3"> 
+ 
+            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-md-6&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;block-right&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;contact-area&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;</span><span class="s5">ul</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">li</span><span class="s4">&gt;&lt;</span><span class="s5">i </span><span class="s6">class=</span><span class="s7">&quot;fa fa-user&quot;</span><span class="s4">&gt;&lt;/</span><span class="s5">i</span><span class="s4">&gt;</span><span class="s3">当前用户：1506010123（XX）</span><span class="s4">&lt;/</span><span class="s5">li</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">li</span><span class="s4">&gt;&lt;</span><span class="s5">a </span><span class="s6">href=</span><span class="s7">&quot;#&quot;</span><span class="s4">&gt;</span><span class="s3">注销</span><span class="s4">&lt;/</span><span class="s5">a</span><span class="s4">&gt;&lt;/</span><span class="s5">li</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;/</span><span class="s5">ul</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s8">&lt;!-- .col-md-6 close --&gt;</span><span class="s3"> 
+        </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s8">&lt;!-- .row close --&gt;</span><span class="s3"> 
+        </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;row &quot;</span><span class="s4">&gt;</span><span class="s3"> 
+            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-md-12&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;</span><span class="s5">ul </span><span class="s6">class=</span><span class="s7">&quot;nav nav-tabs&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;</span><span class="s5">li</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;</span><span class="s5">a </span><span class="s6">href=</span><span class="s7">&quot;application-manager.jsp&quot;</span><span class="s4">&gt;</span><span class="s3">资料审核</span><span class="s4">&lt;/</span><span class="s5">a</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;/</span><span class="s5">li</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;</span><span class="s5">li </span><span class="s6">class=</span><span class="s7">&quot;active&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;</span><span class="s5">a </span><span class="s6">href=</span><span class="s7">&quot;manageStudent.jsp&quot;</span><span class="s4">&gt;</span><span class="s3">学生管理</span><span class="s4">&lt;/</span><span class="s5">a</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;/</span><span class="s5">li</span><span class="s4">&gt;</span><span class="s3"> 
+ 
+ 
+                </span><span class="s4">&lt;/</span><span class="s5">ul</span><span class="s4">&gt;</span><span class="s3"> 
+            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+        </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s8">&lt;!-- .container close --&gt;</span><span class="s3"> 
+</span><span class="s4">&lt;/</span><span class="s5">section</span><span class="s4">&gt;</span><span class="s8">&lt;!-- #heder close --&gt;</span><span class="s3"> 
+ 
+ 
+</span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;container&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;row&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+        </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-md-2&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+            </span><span class="s4">&lt;</span><span class="s5">ul </span><span class="s6">class=</span><span class="s7">&quot;nav nav-stacked nav-pills&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;</span><span class="s5">li</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;</span><span class="s5">a </span><span class="s6">href=</span><span class="s7">&quot;manageStudent.jsp&quot;</span><span class="s4">&gt;</span><span class="s3">查看学生资料</span><span class="s4">&lt;/</span><span class="s5">a</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;/</span><span class="s5">li</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;</span><span class="s5">li</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;</span><span class="s5">a </span><span class="s6">href=</span><span class="s7">&quot;select-students.jsp&quot;</span><span class="s4">&gt;</span><span class="s3">筛选学生</span><span class="s4">&lt;/</span><span class="s5">a</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;/</span><span class="s5">li</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;</span><span class="s5">li  </span><span class="s6">class=</span><span class="s7">&quot;active&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;</span><span class="s5">a </span><span class="s6">href=</span><span class="s7">&quot;add-students.jsp&quot;</span><span class="s4">&gt;</span><span class="s3">添加学生</span><span class="s4">&lt;/</span><span class="s5">a</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;/</span><span class="s5">li</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;</span><span class="s5">li</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;</span><span class="s5">a </span><span class="s6">href=</span><span class="s7">&quot;import-students.jsp&quot;</span><span class="s4">&gt;</span><span class="s3">导入学生资料</span><span class="s4">&lt;/</span><span class="s5">a</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;/</span><span class="s5">li</span><span class="s4">&gt;</span><span class="s3"> 
+            </span><span class="s4">&lt;/</span><span class="s5">ul</span><span class="s4">&gt;</span><span class="s3"> 
+        </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+        </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-md-10&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+            </span><span class="s4">&lt;</span><span class="s5">h3</span><span class="s4">&gt;</span><span class="s3"> 
+                添加学生 
+            </span><span class="s4">&lt;/</span><span class="s5">h3</span><span class="s4">&gt;</span><span class="s3"> 
+            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">id=</span><span class="s7">&quot;studentInfo&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;</span><span class="s5">form </span><span class="s6">method=</span><span class="s7">&quot;post&quot; </span><span class="s6">action=</span><span class="s7">&quot;</span><span class="s9">${</span><span class="s10">pageContext</span><span class="s11">.</span><span class="s10">request</span><span class="s11">.</span><span class="s10">contextPath </span><span class="s9">}</span><span class="s7">/manager/addStudent.action&quot; </span><span class="s6">class=</span><span class="s7">&quot;form-horizontal&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;form-group&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;</span><span class="s5">label </span><span class="s6">for=</span><span class="s7">&quot;&quot; </span><span class="s6">class=</span><span class="s7">&quot;col-sm-2 text-right&quot;</span><span class="s4">&gt;</span><span class="s3">院系:</span><span class="s4">&lt;/</span><span class="s5">label</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-10 row&quot; </span><span class="s6">id=</span><span class="s7">&quot;departmentSpecialty&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s8">&lt;!--department select--&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot; col-sm-3&quot; </span><span class="s6">style=</span><span class="s7">&quot;</span><span class="s12">padding-right</span><span class="s3">: </span><span class="s13">0</span><span class="s7">&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;</span><span class="s5">select </span><span class="s6">class=</span><span class="s7">&quot;form-control selectChoice&quot; </span><span class="s6">id=</span><span class="s7">&quot;department&quot; </span><span class="s4">&gt;</span><span class="s3"> 
+                                    </span><span class="s4">&lt;</span><span class="s5">option </span><span class="s6">value=</span><span class="s7">&quot;0&quot;</span><span class="s4">&gt;</span><span class="s3">选择学院</span><span class="s4">&lt;/</span><span class="s5">option</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;/</span><span class="s5">select</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+ 
+                            </span><span class="s8">&lt;!--domain select--&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-3&quot; </span><span class="s6">style=</span><span class="s7">&quot;</span><span class="s12">padding-right</span><span class="s3">: </span><span class="s13">0</span><span class="s7">&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;</span><span class="s5">select </span><span class="s6">class=</span><span class="s7">&quot;form-control selectChoice&quot; </span><span class="s6">id=</span><span class="s7">&quot;domain&quot;   </span><span class="s4">&gt;</span><span class="s3"> 
+                                    </span><span class="s4">&lt;</span><span class="s5">option </span><span class="s6">value=</span><span class="s7">&quot;0&quot; </span><span class="s4">&gt;</span><span class="s3">选择专业</span><span class="s4">&lt;/</span><span class="s5">option</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;/</span><span class="s5">select</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+ 
+ 
+                            </span><span class="s8">&lt;!--grade select--&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-2&quot; </span><span class="s6">style=</span><span class="s7">&quot;</span><span class="s12">padding-right</span><span class="s3">: </span><span class="s13">0</span><span class="s7">&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;</span><span class="s5">select </span><span class="s6">class=</span><span class="s7">&quot;form-control  selectChoice&quot; </span><span class="s6">id=</span><span class="s7">&quot;grade&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                    </span><span class="s4">&lt;</span><span class="s5">option </span><span class="s6">value=</span><span class="s7">&quot;0&quot;</span><span class="s4">&gt;</span><span class="s3">选择班级</span><span class="s4">&lt;/</span><span class="s5">option</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;/</span><span class="s5">select</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+ 
+                        </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s8">&lt;!--填入框--&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">id=</span><span class="s7">&quot;inputs&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s8">&lt;!--name,id--&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;form-group&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">label </span><span class="s6">for=</span><span class="s7">&quot;studentId&quot; </span><span class="s6">class=</span><span class="s7">&quot;col-sm-2 text-right&quot;</span><span class="s4">&gt;</span><span class="s3">学号:</span><span class="s4">&lt;/</span><span class="s5">label</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-3&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;</span><span class="s5">input </span><span class="s6">type=</span><span class="s7">&quot;text&quot; </span><span class="s6">name=</span><span class="s7">&quot;studentId&quot; </span><span class="s6">class=</span><span class="s7">&quot;form-control col-sm-3&quot; </span><span class="s6">placeholder=</span><span class="s7">&quot;1506010501&quot;</span><span class="s4">/&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+ 
+                            </span><span class="s4">&lt;</span><span class="s5">label </span><span class="s6">for=</span><span class="s7">&quot;studentName&quot; </span><span class="s6">class=</span><span class="s7">&quot;col-sm-1 text-right&quot; </span><span class="s4">&gt;</span><span class="s3">姓名:</span><span class="s4">&lt;/</span><span class="s5">label</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-3&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;</span><span class="s5">input </span><span class="s6">type=</span><span class="s7">&quot;text&quot; </span><span class="s6">name=</span><span class="s7">&quot;studentName&quot; </span><span class="s6">class=</span><span class="s7">&quot;form-control col-sm-3&quot; </span><span class="s6">placeholder=</span><span class="s7">&quot;金培源&quot;</span><span class="s4">/&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s8">&lt;!--sex,politicalStatus--&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;form-group&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">label  </span><span class="s6">class=</span><span class="s7">&quot;col-sm-2 text-right radio_inline &quot;</span><span class="s4">&gt;</span><span class="s3">性别:</span><span class="s4">&lt;/</span><span class="s5">label</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-2&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-6&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                    </span><span class="s4">&lt;</span><span class="s5">input </span><span class="s6">type=</span><span class="s7">&quot;radio&quot; </span><span class="s6">name=</span><span class="s7">&quot;sex&quot; </span><span class="s6">id=</span><span class="s7">&quot;optionsRadio1&quot; </span><span class="s6">value=</span><span class="s7">&quot;man&quot;  </span><span class="s6">checked</span><span class="s4">/&gt;</span><span class="s3">男 
+                                </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-6&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                    </span><span class="s4">&lt;</span><span class="s5">input </span><span class="s6">type=</span><span class="s7">&quot;radio&quot; </span><span class="s6">name=</span><span class="s7">&quot;sex&quot; </span><span class="s6">id=</span><span class="s7">&quot;optionsRadio2&quot;  </span><span class="s6">value=</span><span class="s7">&quot;woman&quot;</span><span class="s4">/&gt;</span><span class="s3">女 
+                                </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+ 
+                            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">label </span><span class="s6">for=</span><span class="s7">&quot;politicalStatus&quot; </span><span class="s6">class=</span><span class="s7">&quot;col-sm-2 text-right&quot;</span><span class="s4">&gt;</span><span class="s3">政治面貌:</span><span class="s4">&lt;/</span><span class="s5">label</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-3&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;</span><span class="s5">input </span><span class="s6">type=</span><span class="s7">&quot;text&quot; </span><span class="s6">name=</span><span class="s7">&quot;politicalStatus&quot; </span><span class="s6">class=</span><span class="s7">&quot;form-control col-sm-3&quot; </span><span class="s6">placeholder=</span><span class="s7">&quot;预备党员&quot;</span><span class="s4">/&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s8">&lt;!--CET-4，CET-6--&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;form-group&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">label  </span><span class="s6">for=</span><span class="s7">&quot;CET-4&quot; </span><span class="s6">class=</span><span class="s7">&quot;col-sm-2 text-right&quot;</span><span class="s4">&gt;</span><span class="s3">四级成绩:</span><span class="s4">&lt;/</span><span class="s5">label</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-3&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;</span><span class="s5">input </span><span class="s6">type=</span><span class="s7">&quot;text&quot; </span><span class="s6">name=</span><span class="s7">&quot;CET-4&quot; </span><span class="s6">class=</span><span class="s7">&quot;form-control col-sm-3&quot; </span><span class="s6">placeholder=</span><span class="s7">&quot;560&quot;</span><span class="s4">/&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+ 
+                            </span><span class="s4">&lt;</span><span class="s5">label </span><span class="s6">for=</span><span class="s7">&quot;CET-6&quot; </span><span class="s6">class=</span><span class="s7">&quot;col-sm-2 text-right col-sm-pull-1&quot;</span><span class="s4">&gt;</span><span class="s3">六级成绩:</span><span class="s4">&lt;/</span><span class="s5">label</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-3 col-sm-pull-1&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;</span><span class="s5">input </span><span class="s6">type=</span><span class="s7">&quot;text&quot; </span><span class="s6">name=</span><span class="s7">&quot;CET-6&quot; </span><span class="s6">class=</span><span class="s7">&quot;form-control col-sm-3 &quot; </span><span class="s6">placeholder=</span><span class="s7">&quot;540&quot;</span><span class="s4">/&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s8">&lt;!--GPA,rank--&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;form-group&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">label  </span><span class="s6">for=</span><span class="s7">&quot;GPA&quot; </span><span class="s6">class=</span><span class="s7">&quot;col-sm-2 text-right&quot;</span><span class="s4">&gt;</span><span class="s3">绩点:</span><span class="s4">&lt;/</span><span class="s5">label</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-3&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;</span><span class="s5">input </span><span class="s6">type=</span><span class="s7">&quot;text&quot; </span><span class="s6">name=</span><span class="s7">&quot;GPA&quot; </span><span class="s6">id=</span><span class="s7">&quot;GPA&quot; </span><span class="s6">class=</span><span class="s7">&quot;form-control &quot; </span><span class="s6">placeholder=</span><span class="s7">&quot;5.0&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+ 
+                            </span><span class="s4">&lt;</span><span class="s5">label  </span><span class="s6">for=</span><span class="s7">&quot;rank&quot; </span><span class="s6">class=</span><span class="s7">&quot;col-sm-1 text-right&quot;</span><span class="s4">&gt;</span><span class="s3">排名:</span><span class="s4">&lt;/</span><span class="s5">label</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-3&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                                </span><span class="s4">&lt;</span><span class="s5">input </span><span class="s6">type=</span><span class="s7">&quot;text&quot; </span><span class="s6">name=</span><span class="s7">&quot;rank&quot; </span><span class="s6">id=</span><span class="s7">&quot;rank&quot; </span><span class="s6">class=</span><span class="s7">&quot;form-control&quot; </span><span class="s6">placeholder=</span><span class="s7">&quot;3&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s8">&lt;!--operator button--&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;form-group &quot;</span><span class="s4">&gt;</span><span class="s3"> 
+ 
+                        </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-6 col-sm-push-4 col-xs-5 &quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">button </span><span class="s6">class=</span><span class="s7">&quot;btn btn-info  center-block col-sm-2&quot; </span><span class="s6">type=</span><span class="s7">&quot;submit&quot;</span><span class="s4">&gt;</span><span class="s3">提交</span><span class="s4">&lt;/</span><span class="s5">button</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+ 
+ 
+                        </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-sm-6 &quot;</span><span class="s4">&gt;</span><span class="s3"> 
+                            </span><span class="s4">&lt;</span><span class="s5">button </span><span class="s6">class=</span><span class="s7">&quot;btn btn-danger col-sm-2 &quot; </span><span class="s6">type=</span><span class="s7">&quot;reset&quot;</span><span class="s4">&gt;</span><span class="s3">重置</span><span class="s4">&lt;/</span><span class="s5">button</span><span class="s4">&gt;</span><span class="s3"> 
+                        </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                    </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+                </span><span class="s4">&lt;/</span><span class="s5">form</span><span class="s4">&gt;</span><span class="s3"> 
+            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+        </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt; </span><span class="s8">&lt;!--row end--&gt;</span><span class="s3"> 
+</span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s8">&lt;!--container end--&gt;</span><span class="s3"> 
+ 
+ 
+</span><span class="s8">&lt;!-- footer Start 
+====================================================================== --&gt;</span><span class="s3"> 
+ 
+</span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">id=</span><span class="s7">&quot;footer&quot; </span><span class="s6">style=</span><span class="s7">&quot;</span><span class="s12">display</span><span class="s3">: </span><span class="s5">none</span><span class="s7">&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;container&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+        </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;row&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+            </span><span class="s4">&lt;</span><span class="s5">div </span><span class="s6">class=</span><span class="s7">&quot;col-md-12&quot;</span><span class="s4">&gt;</span><span class="s3"> 
+            </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s8">&lt;!-- col-md-12 --&gt;</span><span class="s3"> 
+        </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s8">&lt;!-- .row --&gt;</span><span class="s3"> 
+    </span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s8">&lt;!-- .container --&gt;</span><span class="s3"> 
+</span><span class="s4">&lt;/</span><span class="s5">div</span><span class="s4">&gt;</span><span class="s8">&lt;!-- #footer --&gt;</span><span class="s3"> 
+ 
+</span><span class="s4">&lt;/</span><span class="s5">body</span><span class="s4">&gt;</span><span class="s3"> 
+</span><span class="s4">&lt;/</span><span class="s5">html</span><span class="s4">&gt;</span><span class="s3"> 
+</span></pre>
+</body>
+</html>

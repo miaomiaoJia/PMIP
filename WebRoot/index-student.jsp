@@ -20,10 +20,6 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/bootstrap-fileupload.min.css">
 
-    <script src="assets/js/jquery-2.1.1.js"></script>
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/bootstrap-fileupload.js"></script>
-
 </head>
 <body>
 
@@ -62,7 +58,8 @@
                     <div class="contact-area">
                         <ul>
                             <li><i class="fa fa-user"></i>当前用户：1506010123（学生）</li>
-                            <li><a href="#">注销</a></li>
+                            <li><a href="login.jsp">注销</a></li>
+                            <li><a href="modifyPassword.jsp">修改密码</a></li>
                         </ul>
                     </div>
                 </div>
@@ -109,6 +106,9 @@
                 <li>
                     <a href="#" class="UploadMaterial">材料上传</a>
                 </li>
+                <li>
+                    <a href="#" class="ApplicationMaterial">申请认证</a>
+                </li>
             </ul>
             <ul class="nav nav-stacked nav-pills" id="LeftAlerts">
                 <li>
@@ -119,6 +119,7 @@
                 </li>
             </ul>
         </div>
+
         <div class="col-md-8">
             <div class="MidPersonalInformation">
                 <table class="table table-bordered">
@@ -330,104 +331,124 @@
                 <form role="form" action="${pageContext.request.contextPath }/student/login.action" method="post">
                     <div class="form-group">
                         <label for="name">材料名称</label>
-                        <input type="text" class="form-control col-sm-8" id="name"
-                               placeholder="请输入名称" name="materialname">
+                        <select class="form-control selectChoice" name=" ">
+                            <option value="0">入党申请</option>
+                            <option value="1">思想汇报</option>
+                            <option value="2">自传</option>
+                            <option value="3">其他</option>
+                        </select>
+                        <div class="form-group">
+                        <label for="inputfile">上传文件</label>
+                        <input type="file" id="inputfile">
+                   		 </div>
+                    	<button type="submit" class="btn btn-default">提交</button>
                     </div>
-                    <div class="row" style="margin-top: 6%">
-                        <div class="form-group col-sm-3" style="">
-
-                            <label for="choosefile">选择分类</label>
-                            <div style="width: 70%">
-                                <select class="form-control selectChoice" id="department" >
-                                    <option value="0">思想汇报</option>
-                                    <option value="1">四级成绩</option>
-                                    <option value="2">六级成绩</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group col-sm-5" >
-
-                            <label for="inputfile">上传文件</label>
-
-                            <div class="fileupload fileupload-new" data-provides="fileupload">
-                                <span class="btn btn-file btn-default">
-                                    <span class="fileupload-new">选择文件</span>
-                                    <span class="fileupload-exists">更换文件</span>
-                                    <input type="file" id="inputfile">
-                                </span>
-                                <span class="fileupload-preview"></span>
-                                <a href="#" class="close fileupload-exists" data-dismiss="fileupload"
-                                   style="float: none">×</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group ">
-                        <button type="submit" class="btn btn-info">提交</button>
-                    </div>
-
                 </form>
             </div>
-            <div class="MidCommonFile">
-                <div class="col-md-12">
-                    <a href="#" class="list-group-item ">
-                        入党申请表格
-                    </a>
+
+
+            <div class="MidApplicationMaterial">
+                <form role="form" action="${pageContext.request.contextPath }/student/login.action" method="post">
+
+                    <div class="form-group" >
+
+                        <div class="row">
+                            <div class="col-lg-3">
+                        		<label for="name">申请类型</label>
+                        		<select class="form-control" id="showntype">
+                                    <option value="0">申请类型</option>
+                                    <option value="1">计算机等级考试</option>
+                                    <option value="2">四级成绩</option>
+                                    <option value="3">六级成绩</option>
+                                    <option value="4">社会工作</option>
+                                    <option value="5">其他</option>
+                        		</select>
+                        	</div>
+                        </div>
+                        <br>
+
+                         <div class="row">
+	                        <div class="col-lg-4">
+	                        	<div class="cet4add">
+	                        		<label for="choosefile">成绩</label>
+			                        <select class="form-control" id="selectTest2">
+			                        	<option value="0">成绩</option>
+			                        </select>
+			                        <br>
+		                        </div>
+	                        </div>
+	                    </div>
+
+	                    <div class="form-group">
+                            <label for="inputfile">上传文件</label>
+                            <input type="file" id="inputfile">
+                   		</div>
+
+                    	<button type="submit" class="btn btn-default">提交</button>
+
+                    </div>
+                </form>
+            </div>
+
+
+
+
+		 	<div class="MidCommonFile">
+            	<div class="col-md-12">
+                    <a href="#" class="list-group-item ">入党申请表格</a>
                     <a href="#" class="list-group-item">积极分子申请表</a>
                     <a href="#" class="list-group-item">十九大开幕式总结</a>
                     <a href="#" class="list-group-item"></a>
                     <a href="#" class="list-group-item"></a>
-                </div>
-            </div>
-            <div class="MidNotification">
-                <div class="col-md-12">
+            	</div>
+			</div>
 
-                    <table class="table table-bordered">
-                        <tbody>
-                        <tr>
-                            <th>标题</th>
-                            <th>内容</th>
-                            <th>时间</th>
-                            <th>状态</th>
-                        </tr>
-                        <tr>
-                            <td><c:set target="${massage}" property="newstitle" value="十九大报告"></c:set>
-                                <c:out value="${massage.newstitle}"></c:out>
-                            </td>
-                            <td><c:set target="${massage}" property="newscontent" value="十九大报告分析"></c:set>
-                                <a href="#"><c:out value="${massage.newscontent}"></c:out></a>
-                            </td>
-                            <td><c:set target="${massage}" property="newstime" value="2017.09.03"></c:set>
-                                <c:out value="${massage.newstime}"></c:out>
-                            </td>
-                            <td><c:set target="${massage}" property="newstate" value="已读"></c:set>
-                                <c:out value="${massage.newstate}"></c:out>
-                            </td>
-                        </tr>
-                        <tr>
-                        <tr>
-                            <td><c:set target="${massage}" property="newstitle" value="党员培训通知"></c:set>
-                                <c:out value="${massage.newstitle}"></c:out>
-                            </td>
-                            <td><c:set target="${massage}" property="newscontent" value="www.baidu.com"></c:set>
-                                <a href="#"><c:out value="${massage.newscontent}"></c:out></a>
-                            </td>
-                            <td><c:set target="${massage}" property="newstime" value="2017.10.10"></c:set>
-                                <c:out value="${massage.newstime}"></c:out>
-                            </td>
-                            <td><c:set target="${massage}" property="newstate" value="未读"></c:set>
-                                <c:out value="${massage.newstate}"></c:out>
-                            </td>
-                        </tr>
-                        </tr>
 
-                        </tbody>
-                </div>
-            </div>
-        </div>
 
-    </div>
-</div>
+
+           	<div class="MidNotification">
+				<div class="col-md-12">
+					<table class="table table-bordered">
+						<tbody>
+							<tr>
+								<th>标题</th>
+								<th>内容</th>
+								<th>时间</th>
+								<th>状态</th>
+							</tr>
+							<tr>
+								<td><c:set target="${massage}" property="newstitle" value="十九大报告"></c:set>
+									<c:out value="${massage.newstitle}"></c:out>
+								</td>
+								<td><c:set target="${massage}" property="newscontent" value="十九大报告分析"></c:set>
+									<a href="#"><c:out value="${massage.newscontent}"></c:out></a>
+								</td>
+								<td><c:set target="${massage}" property="newstime" value="2017.09.03"></c:set>
+									<c:out value="${massage.newstime}"></c:out>
+								</td>
+								<td><c:set target="${massage}" property="newstate" value="已读"></c:set>
+									<c:out value="${massage.newstate}"></c:out>
+								</td>
+							</tr>
+							<tr>
+							<td><c:set target="${massage}" property="newstitle" value="党员培训通知"></c:set>
+								<c:out value="${massage.newstitle}"></c:out>
+							</td>
+							<td><c:set target="${massage}" property="newscontent" value="www.baidu.com"></c:set>
+								<a href="#"><c:out value="${massage.newscontent}"></c:out></a>
+							</td>
+							<td><c:set target="${massage}" property="newstime" value="2017.10.10"></c:set>
+								<c:out value="${massage.newstime}"></c:out>
+							</td>
+							<td><c:set target="${massage}" property="newstate" value="未读"></c:set>
+								<c:out value="${massage.newstate}"></c:out>
+							</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
 
 
 <!-- footer Start
@@ -443,6 +464,7 @@
     <script src="assets/js/jquery-2.1.1.js"></script>
     <script src="assets/js/student.js"></script>
     <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/bootstrap-fileupload.js"></script>
 </div><!-- #footer -->
 
 </body>

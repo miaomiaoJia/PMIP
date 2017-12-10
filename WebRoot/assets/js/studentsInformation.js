@@ -142,11 +142,25 @@ $(function(){
             };
         };
     })(jQuery);
+    
+    /**
+     * 设置日期控件
+     * @author WBF
+     * **/
+//    $("#date").datetimepicker({
+//        startView:4,
+//        maxView:4,
+//        minView:2,
+//        format: "yyyy-mm-dd ",
+//        autoclose: true,
+//        todayBtn: true,
+//        todayHighlight:true
+//    });
 
-    /*
-    * 设置定时器
-    *
-    * */
+    /**
+     * 设置定时器
+     * @author WBF
+     * */
     setInterval( function  getTime(){
         var myDate =new Date();
         var nowTime=myDate.toLocaleString();
@@ -157,6 +171,23 @@ $(function(){
         $("#selector").addClass("hidden")
         $("#selectedStudents").removeClass("hidden");
     })
+
+    $("#leading-in").on("click",function () {
+        $("#title").text("单个添加学生信息")
+        $("#control").toggleClass("hidden")
+        $("#introduction").addClass("hidden")
+        $("#studentInfo").removeClass("hidden")
+    })
+
+    $("#batch-import").on("click",function () {
+        $("#control").toggleClass("hidden")
+        $("#title").text("批量导入学生信息")
+        $("#introduction").addClass("hidden")
+        $("#studentsInfo").removeClass("hidden")
+    })
+
+   
+
     /**
      * 设置鼠标聚焦和鼠标离开事件
      * @author wbf
@@ -232,31 +263,31 @@ $(function(){
     });
 
 
-    /*获取搜索的学生记录*/
-    var students={
-        "selectedStudents":[
-            {   department:"计算机与信息学院",
-                grade:"2015级",
-                domain:"计算机科学与技术",
-                classes:"5",
-                id:1506010512,
-                name:"金培源",
-                sex:"男",
-                politicalStatus:"预备党员",
-                GPA:5.0
-            },
-            {   department:"计算机与信息学院",
-                grade:"2015级",
-                domain:"计算机科学与技术",
-                classes:"5",
-                id:1506010513,
-                name:"王秉发",
-                sex:"男",
-                politicalStatus:"入党积极分子",
-                GPA:5.0
-            }
-        ]
-    }
+    获取搜索的学生记录
+     var students={
+         "selectedStudents":[
+             {   department:"计算机与信息学院",
+                 grade:"2015级",
+                 domain:"计算机科学与技术",
+                 classes:"5",
+                 id:1506010512,
+                 name:"金培源",
+                 sex:"男",
+                 politicalStatus:"预备党员",
+                 GPA:5.0
+             },
+             {   department:"计算机与信息学院",
+                 grade:"2015级",
+                 domain:"计算机科学与技术",
+                 classes:"5",
+                 id:1506010513,
+                 name:"王秉发",
+                 sex:"男",
+                 politicalStatus:"入党积极分子",
+                 GPA:5.0
+             }
+         ]
+     }
 
     var records=6;           //查询到的记录数
     var column=10            //表格的列数
