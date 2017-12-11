@@ -39,4 +39,12 @@ public class StudentServiceImpl implements StudentService{
 			return false;
 		}
 	}
+	@Override
+	public Boolean insertEmail(Student student) throws Exception {
+		return studentMapper.insertEmail(student);
+	}
+	@Override
+	public Student selectStuByNameNum(Student student) throws Exception {
+		return studentMapper.selectStuByNameNum(student);
+	}
 }

@@ -27,4 +27,10 @@ public interface MaterialMapper {
     int updateByPrimaryKeySelective(Material record);
 
     int updateByPrimaryKey(Material record);
+    //根据学生id查询该学生的所有材料
+    List<Material> selectByStudentId(Integer id) throws Exception;
+    
+    //根据材料的id查询材料
+    Material selectById(Integer id) throws Exception;
+    
 }

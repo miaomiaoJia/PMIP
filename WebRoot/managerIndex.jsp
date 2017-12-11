@@ -5,7 +5,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <title>My JSP 'modifyPassword.jsp' starting page</title>
+    <title>My JSP 'managerIndex.jsp' starting page</title>
     
 	<meta http-equiv="pragma" content="no-cache">
 	<meta http-equiv="cache-control" content="no-cache">
@@ -19,12 +19,10 @@
   </head>
   
   <body>
-    <h1 align="center">修改密码页面</h1><br/>
-    <form method="post" action="${pageContext.request.contextPath }/student/modifyPassword">
-     新密码：<input type="password" name="password"><br/>
-     <!--   邮箱： <input type="text" name="email"><br/> -->
-    验证码： <input type="text" name="verifyCode"/>
-        <input type="submit" value="提交"/>
-    </form> 
+    <h1 align="center">管理员中心</h1>
+    <a href="${pageContext.request.contextPath }/addstudent.jsp">添加学生信息</a>
+    <a href="${pageContext.request.contextPath }/manager/seeAllStudent.action">查看所有学生信息</a>
+    <a href="${pageContext.request.contextPath }/addnews.jsp">给学生发送消息</a>
+    <a href="${pageContext.request.contextPath }/select.jsp">选择查询方式</a>
   </body>
 </html>

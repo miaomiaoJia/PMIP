@@ -43,6 +43,6 @@
 		<!-- 配置上传文件 -->
 		<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 			<!-- 设置上传文件最大尺寸 -->
-			<property name="maxUploadSize" value="204800"></property>
+			<property name="maxUploadSize" value="4000000"></property>
 		</bean>
 </beans>

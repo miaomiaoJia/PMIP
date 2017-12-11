@@ -339,6 +339,10 @@
   <select id="isExit" parameterType="cn.hhu.ssm.pojo.Student" resultType="cn.hhu.ssm.pojo.Student">
      select * from student where studentname=#{studentname} and password=#{password}
   </select>
+  <!-- 根据用户名学号查询用户 -->
+  <select id="selectStuByNameNum" parameterType="cn.hhu.ssm.pojo.Student" resultType="cn.hhu.ssm.pojo.Student">
+     select * from student where studentname=#{studentname} and studentnumber=#{studentnumber}
+  </select>
   <!-- 根据id修改密码 -->
   <update id="modifyPassword" parameterType="cn.hhu.ssm.pojo.Student">
      update student set password=#{password} where id=#{id}
@@ -351,4 +355,8 @@
   <select id="selectByStudentClas" parameterType="cn.hhu.ssm.pojo.Student" resultType="cn.hhu.ssm.pojo.Student">
      select * from student where studentclass=#{studentclass} 
   </select>
+  <!-- 修改学生信息  -->
+  <update id="insertEmail" parameterType="cn.hhu.ssm.pojo.Student">
+      update student set email=#{email} where id=#{id}
+  </update>
 </mapper>

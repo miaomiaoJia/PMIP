@@ -208,4 +208,13 @@
       state = #{state,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <!-- 根据学生的id查询所有材料 -->
+  <select id="selectByStudentId"  parameterType="java.lang.Integer" resultType="cn.hhu.ssm.pojo.Material">
+      select * from material where  student_id=#{student_id}
+  </select>
+  
+  <!-- 根据材料的id主键查询材料 -->
+  <select id="selectById" parameterType="java.lang.Integer" resultType="cn.hhu.ssm.pojo.Material">
+      select * from material where id=#{id}
+  </select>
 </mapper>

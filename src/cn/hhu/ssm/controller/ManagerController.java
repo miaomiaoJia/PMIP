@@ -51,7 +51,7 @@ public class ManagerController {
 	    	  session.setAttribute("manager", manager);
 	    	  return "/managerIndex.jsp";
 	      }else{
-	    	  session.setAttribute("msg", "管理员不存在");
+	    	  	
 	    	  return "/login.jsp";
 	      }
    }
